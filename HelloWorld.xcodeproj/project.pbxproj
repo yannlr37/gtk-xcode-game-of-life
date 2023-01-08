@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		AA33A9C529470AA8005D3867 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA33A9C429470AA8005D3867 /* main.cpp */; };
+		AA33A9D02948F957005D3867 /* Cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA33A9CE2948F957005D3867 /* Cell.cpp */; };
+		AA33A9D429491BD1005D3867 /* Grid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA33A9D229491BD1005D3867 /* Grid.cpp */; };
+		AA7C0280296B340700C13921 /* View.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA7C027E296B340700C13921 /* View.cpp */; };
+		AAC70A612950FEEF00F2F316 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAC70A5F2950FEEF00F2F316 /* Application.cpp */; };
+		AAC70A642951066B00F2F316 /* callbacks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AAC70A622951066A00F2F316 /* callbacks.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,17 @@
 /* Begin PBXFileReference section */
 		AA33A9C129470AA8005D3867 /* HelloWorld */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelloWorld; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA33A9C429470AA8005D3867 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		AA33A9CE2948F957005D3867 /* Cell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cell.cpp; sourceTree = "<group>"; };
+		AA33A9CF2948F957005D3867 /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
+		AA33A9D1294900E8005D3867 /* Positions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Positions.h; sourceTree = "<group>"; };
+		AA33A9D229491BD1005D3867 /* Grid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Grid.cpp; sourceTree = "<group>"; };
+		AA33A9D329491BD1005D3867 /* Grid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
+		AA7C027E296B340700C13921 /* View.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = View.cpp; sourceTree = "<group>"; };
+		AA7C027F296B340700C13921 /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
+		AAC70A5F2950FEEF00F2F316 /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
+		AAC70A602950FEEF00F2F316 /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
+		AAC70A622951066A00F2F316 /* callbacks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = callbacks.cpp; sourceTree = "<group>"; };
+		AAC70A632951066B00F2F316 /* callbacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = callbacks.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +74,17 @@
 			isa = PBXGroup;
 			children = (
 				AA33A9C429470AA8005D3867 /* main.cpp */,
+				AA33A9CE2948F957005D3867 /* Cell.cpp */,
+				AA33A9CF2948F957005D3867 /* Cell.h */,
+				AA33A9D1294900E8005D3867 /* Positions.h */,
+				AA33A9D229491BD1005D3867 /* Grid.cpp */,
+				AA33A9D329491BD1005D3867 /* Grid.h */,
+				AAC70A5F2950FEEF00F2F316 /* Application.cpp */,
+				AAC70A602950FEEF00F2F316 /* Application.h */,
+				AAC70A622951066A00F2F316 /* callbacks.cpp */,
+				AAC70A632951066B00F2F316 /* callbacks.h */,
+				AA7C027E296B340700C13921 /* View.cpp */,
+				AA7C027F296B340700C13921 /* View.h */,
 			);
 			path = HelloWorld;
 			sourceTree = "<group>";
@@ -118,7 +145,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA7C0280296B340700C13921 /* View.cpp in Sources */,
+				AAC70A612950FEEF00F2F316 /* Application.cpp in Sources */,
+				AA33A9D429491BD1005D3867 /* Grid.cpp in Sources */,
+				AAC70A642951066B00F2F316 /* callbacks.cpp in Sources */,
 				AA33A9C529470AA8005D3867 /* main.cpp in Sources */,
+				AA33A9D02948F957005D3867 /* Cell.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +234,72 @@
 		AA33A9C929470AA8005D3867 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				OTHER_CFLAGS = (
+					"-I/opt/local/include/gtk-2.0",
+					"-I/opt/local/lib/gtk-2.0/include",
+					"-I/opt/local/include/pango-1.0",
+					"-I/opt/local/include/harfbuzz",
+					"-I/opt/local/include/pango-1.0",
+					"-I/opt/local/include/fribidi",
+					"-I/opt/local/include",
+					"-I/opt/local/include/harfbuzz",
+					"-I/opt/local/include",
+					"-I/opt/local/include/cairo",
+					"-I/opt/local/include/atk-1.0",
+					"-I/opt/local/include/cairo",
+					"-I/opt/local/include/pixman-1",
+					"-I/opt/local/include",
+					"-I/opt/local/include/freetype2",
+					"-I/opt/local/include",
+					"-I/opt/local/include/gdk-pixbuf-2.0",
+					"-I/opt/local/include/libpng16",
+					"-I/opt/local/include",
+					"-I/opt/local/include/glib-2.0",
+					"-I/opt/local/lib/glib-2.0/include",
+					"-I/opt/local/include",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-I/opt/local/include/gtk-2.0",
+					"-I/opt/local/lib/gtk-2.0/include",
+					"-I/opt/local/include/pango-1.0",
+					"-I/opt/local/include/harfbuzz",
+					"-I/opt/local/include/pango-1.0",
+					"-I/opt/local/include/fribidi",
+					"-I/opt/local/include",
+					"-I/opt/local/include/harfbuzz",
+					"-I/opt/local/include",
+					"-I/opt/local/include/cairo",
+					"-I/opt/local/include/atk-1.0",
+					"-I/opt/local/include/cairo",
+					"-I/opt/local/include/pixman-1",
+					"-I/opt/local/include",
+					"-I/opt/local/include/freetype2",
+					"-I/opt/local/include",
+					"-I/opt/local/include/gdk-pixbuf-2.0",
+					"-I/opt/local/include/libpng16",
+					"-I/opt/local/include",
+					"-I/opt/local/include/glib-2.0",
+					"-I/opt/local/lib/glib-2.0/include",
+					"-I/opt/local/include",
+				);
+				OTHER_LDFLAGS = (
+					"-L/opt/local/lib",
+					"-lgtk-quartz-2.0",
+					"-lgdk-quartz-2.0",
+					"-framework",
+					Cocoa,
+					"-lpangocairo-1.0",
+					"-lpango-1.0",
+					"-lharfbuzz",
+					"-latk-1.0",
+					"-lcairo",
+					"-lgdk_pixbuf-2.0",
+					"-lgio-2.0",
+					"-lgobject-2.0",
+					"-lglib-2.0",
+					"-lintl",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -209,6 +307,72 @@
 		AA33A9CA29470AA8005D3867 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				OTHER_CFLAGS = (
+					"-I/opt/local/include/gtk-2.0",
+					"-I/opt/local/lib/gtk-2.0/include",
+					"-I/opt/local/include/pango-1.0",
+					"-I/opt/local/include/harfbuzz",
+					"-I/opt/local/include/pango-1.0",
+					"-I/opt/local/include/fribidi",
+					"-I/opt/local/include",
+					"-I/opt/local/include/harfbuzz",
+					"-I/opt/local/include",
+					"-I/opt/local/include/cairo",
+					"-I/opt/local/include/atk-1.0",
+					"-I/opt/local/include/cairo",
+					"-I/opt/local/include/pixman-1",
+					"-I/opt/local/include",
+					"-I/opt/local/include/freetype2",
+					"-I/opt/local/include",
+					"-I/opt/local/include/gdk-pixbuf-2.0",
+					"-I/opt/local/include/libpng16",
+					"-I/opt/local/include",
+					"-I/opt/local/include/glib-2.0",
+					"-I/opt/local/lib/glib-2.0/include",
+					"-I/opt/local/include",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-I/opt/local/include/gtk-2.0",
+					"-I/opt/local/lib/gtk-2.0/include",
+					"-I/opt/local/include/pango-1.0",
+					"-I/opt/local/include/harfbuzz",
+					"-I/opt/local/include/pango-1.0",
+					"-I/opt/local/include/fribidi",
+					"-I/opt/local/include",
+					"-I/opt/local/include/harfbuzz",
+					"-I/opt/local/include",
+					"-I/opt/local/include/cairo",
+					"-I/opt/local/include/atk-1.0",
+					"-I/opt/local/include/cairo",
+					"-I/opt/local/include/pixman-1",
+					"-I/opt/local/include",
+					"-I/opt/local/include/freetype2",
+					"-I/opt/local/include",
+					"-I/opt/local/include/gdk-pixbuf-2.0",
+					"-I/opt/local/include/libpng16",
+					"-I/opt/local/include",
+					"-I/opt/local/include/glib-2.0",
+					"-I/opt/local/lib/glib-2.0/include",
+					"-I/opt/local/include",
+				);
+				OTHER_LDFLAGS = (
+					"-L/opt/local/lib",
+					"-lgtk-quartz-2.0",
+					"-lgdk-quartz-2.0",
+					"-framework",
+					Cocoa,
+					"-lpangocairo-1.0",
+					"-lpango-1.0",
+					"-lharfbuzz",
+					"-latk-1.0",
+					"-lcairo",
+					"-lgdk_pixbuf-2.0",
+					"-lgio-2.0",
+					"-lgobject-2.0",
+					"-lglib-2.0",
+					"-lintl",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -232,6 +396,7 @@
 				AA33A9CA29470AA8005D3867 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

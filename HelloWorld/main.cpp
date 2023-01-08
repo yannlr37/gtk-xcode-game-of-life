@@ -7,9 +7,24 @@
 //
 
 #include <iostream>
+#include <vector>
+#include <time.h>
+#include <gtk/gtk.h>
+#include "Grid.h"
+#include "Application.h"
+#include <sys/time.h>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+double microtime(){
+    return (double(std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::system_clock::now().time_since_epoch()).count()) / double(1000000));
+}
+
+int main(int argc, char * argv[])
+{
+    srand(time(NULL));
+    std::cout << "Bienvenue dans le Jeu de la Vie\n" << std::endl;
+    
+    Application *app = new Application(&argc, &argv);
+    app->run();
+    
+    return EXIT_SUCCESS;
 }
